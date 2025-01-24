@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeIdentityController" customModule="YZB_Company" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="FSt-iF-anK" id="CHb-rg-RGB"/>
+                <outlet property="changeBtn" destination="pJR-Ae-z4t" id="7Ew-6S-w7F"/>
+                <outlet property="identLabel" destination="pV2-uH-rGq" id="YWX-5s-Fns"/>
+                <outlet property="imageView" destination="yjA-cd-fln" id="bfC-Kc-o7H"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_administrator" translatesAutoresizingMaskIntoConstraints="NO" id="yjA-cd-fln">
+                    <rect key="frame" x="117.5" y="81" width="140" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="FcL-zK-ZMx"/>
+                        <constraint firstAttribute="height" constant="140" id="hUC-dE-MgQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您当前身份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nif-8x-TK5">
+                    <rect key="frame" x="151.5" y="243" width="72" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="管理员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pV2-uH-rGq">
+                    <rect key="frame" x="163" y="275" width="49" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJR-Ae-z4t">
+                    <rect key="frame" x="15" y="340" width="345" height="44"/>
+                    <color key="backgroundColor" red="0.13725490196078433" green="0.67450980392156867" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="qxp-st-JsB"/>
+                    </constraints>
+                    <state key="normal" title="切换为采购员">
+                        <color key="titleColor" red="0.99960500001907349" green="0.96312648057937622" blue="0.94876092672348022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="changAtion:" destination="-1" eventType="touchUpInside" id="0jt-wj-k21"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSt-iF-anK">
+                    <rect key="frame" x="15" y="409" width="345" height="44"/>
+                    <color key="backgroundColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="WUJ-jr-SzB"/>
+                    </constraints>
+                    <state key="normal" title="返  回">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="1aX-JM-9G4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pJR-Ae-z4t" firstAttribute="top" secondItem="pV2-uH-rGq" secondAttribute="bottom" constant="45" id="DGn-LC-CUm"/>
+                <constraint firstItem="pV2-uH-rGq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LHm-QI-P69"/>
+                <constraint firstItem="pV2-uH-rGq" firstAttribute="top" secondItem="nif-8x-TK5" secondAttribute="bottom" constant="15" id="Nze-l8-Gs6"/>
+                <constraint firstItem="yjA-cd-fln" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OVB-HT-kGW"/>
+                <constraint firstItem="pJR-Ae-z4t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="PU4-4I-o8s"/>
+                <constraint firstItem="yjA-cd-fln" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="61" id="WFF-eh-7sy"/>
+                <constraint firstItem="FSt-iF-anK" firstAttribute="top" secondItem="pJR-Ae-z4t" secondAttribute="bottom" constant="25" id="cDP-el-iXV"/>
+                <constraint firstItem="FSt-iF-anK" firstAttribute="trailing" secondItem="pJR-Ae-z4t" secondAttribute="trailing" id="dgk-tA-L4m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pJR-Ae-z4t" secondAttribute="trailing" constant="15" id="fal-bp-G1l"/>
+                <constraint firstItem="nif-8x-TK5" firstAttribute="top" secondItem="yjA-cd-fln" secondAttribute="bottom" constant="22" id="rR3-CV-jiK"/>
+                <constraint firstItem="nif-8x-TK5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tCm-bm-TlK"/>
+                <constraint firstItem="FSt-iF-anK" firstAttribute="leading" secondItem="pJR-Ae-z4t" secondAttribute="leading" id="tgd-C1-rNx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-59" y="139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_administrator" width="141" height="141"/>
+    </resources>
+</document>

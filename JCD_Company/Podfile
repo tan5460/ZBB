@@ -1,0 +1,84 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+
+platform:ios,'9.0'
+use_frameworks!
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+abstract_target 'CommonPods' do
+  
+  pod 'AMap2DMap', '5.6.1'                             # 高德地图2D
+  pod 'AMapSearch', '6.9.0'                            # 高德地图搜索
+  pod 'AMapLocation', '2.6.3'                          # 高德地图定位
+  pod 'SwiftyJSON', '5.0.0'                            # json解析
+  pod 'MBProgressHUD', '1.1.0'                         # 加载提示
+  pod 'SnapKit', '4.2.0'                               # 约束
+  pod 'SnapKitExtend'
+  pod 'ObjectMapper', '3.5.1'                          # 模型创建
+  pod 'Alamofire', '4.9.0'                            # 网络请求
+  pod 'Kingfisher'                         # 图片加载
+  pod 'MJRefresh', '>3.2.0'                             # 下拉刷新
+  pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'xcode12'                               # 表单
+  pod 'PopupDialog', '1.0.0'                           # 弹窗警告
+  pod 'FMDB', '2.7.5'                                  # 数据库
+  pod 'IQKeyboardManagerSwift', '6.5.1'                # 监听键盘
+  pod 'TZImagePickerController'               # 图片选择
+  pod 'JWNetAutoCache', '0.0.2'                        # 网页缓存
+  pod "SkeletonView", '1.8.2'                          # 占位图
+  pod 'TLTransitions', '1.5.0'                         # View POp
+  pod 'SwifterSwift', '5.1.0'
+  pod 'SteviaLayout', '4.7.2'
+  pod 'Then', '2.6.0'
+  pod 'HandyJSON', '5.0.1'
+  pod 'SDWebImage', '5.7.4'
+  pod 'ZJTableViewManager', '~> 1.0.6-beta'
+  pod 'CHIPageControl'
+  pod 'Toast-Swift', '~> 5.0.1'
+  
+  pod 'JXSegmentedView'
+  pod 'SKPhotoBrowser'
+  
+  #友盟
+  pod 'UMCCommon', '2.1.1'                             # 基础库
+  pod 'UMCSecurityPlugins', '1.0.6'                    # 安全库
+#  pod 'UMCShare/UI'                           # 界面
+#  pod 'UMCShare/Social/WeChat'                # 微信
+#  pod 'UMCShare/Social/QQ'                    # QQ
+#  pod 'UMCShare/Social/Sina'                  # 微博
+  pod 'UMCCommonLog', '1.0.0'                          # 调试日志
+  #极光
+  pod 'JCore', '2.4.0-noidfa'
+  pod 'JMessage', '3.9.1'                              # 极光IM
+  pod 'JPush', '3.2.4-noidfa'                                 # 极光推送
+  # 微信
+  pod 'WechatOpenSDK'
+  #新浪微博
+  pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+#  pod 'WeiboSDK', '~> 3.2.5'
+  # QQ
+#  pod 'TencentOpenAPI'
+  pod 'Pingpp/AlipayNoUTDID', '2.2.23'                  # 支付宝
+  pod 'Pingpp/Wx', '2.2.23'                             # 微信
+  #pod 'Pingpp/UnionPay', '~> 2.2.23'                      # 银联
+
+  target 'JCD_Company' do
+    
+  end
+  
+  target 'JCD_Company_Test' do
+  end
+  
+  target 'JCD_Company_PRE' do
+
+  end
+  
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['SWIFT_VERSION'] = '5.1'
+    end
+  end
+end

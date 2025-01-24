@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoreCollectionViewCell" customModule="YZB_Company" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="327"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="327"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-xC-weT">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="327"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-XJ-S6S">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CQ6-XJ-S6S" secondAttribute="height" multiplier="1:1" id="9x2-dm-Cf0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skw-T4-15d">
+                                <rect key="frame" x="0.0" y="244" width="240" height="83"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Skw-T4-15d" firstAttribute="top" secondItem="CQ6-XJ-S6S" secondAttribute="bottom" constant="4" id="ETO-C4-X45"/>
+                            <constraint firstItem="CQ6-XJ-S6S" firstAttribute="top" secondItem="0n7-xC-weT" secondAttribute="top" id="MsO-ph-JId"/>
+                            <constraint firstAttribute="bottom" secondItem="Skw-T4-15d" secondAttribute="bottom" id="osH-RM-mYp"/>
+                            <constraint firstItem="Skw-T4-15d" firstAttribute="leading" secondItem="CQ6-XJ-S6S" secondAttribute="leading" id="r1e-bT-AJq"/>
+                            <constraint firstItem="CQ6-XJ-S6S" firstAttribute="leading" secondItem="0n7-xC-weT" secondAttribute="leading" id="s7K-QL-MAl"/>
+                            <constraint firstItem="Skw-T4-15d" firstAttribute="trailing" secondItem="CQ6-XJ-S6S" secondAttribute="trailing" id="smE-dU-HkU"/>
+                            <constraint firstItem="CQ6-XJ-S6S" firstAttribute="centerX" secondItem="0n7-xC-weT" secondAttribute="centerX" id="w6i-tO-E4J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0n7-xC-weT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bvu-p6-ZaL"/>
+                <constraint firstItem="0n7-xC-weT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fZw-Zg-g6y"/>
+                <constraint firstItem="0n7-xC-weT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="gwN-gA-Y9p"/>
+                <constraint firstItem="0n7-xC-weT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zFD-A5-zxV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="240" height="327"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="displayImageView" destination="CQ6-XJ-S6S" id="hlN-p9-DRf"/>
+                <outlet property="displayTitle" destination="Skw-T4-15d" id="R5l-rx-MQ2"/>
+            </connections>
+            <point key="canvasLocation" x="275.36231884057975" y="187.16517857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

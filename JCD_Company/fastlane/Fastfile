@@ -1,0 +1,81 @@
+default_platform(:ios)
+
+$app_target = "com.szgjcd.jucaidao123"
+$app_name = "住保保"
+$app_workspace = "JCD_Company.xcworkspace"
+
+
+
+
+def package_description(type)
+  version_number = get_version_number(xcodeproj: "JCD_Company.xcodeproj")
+  "📱#{$app_name} #{version_number}"
+end
+
+
+
+def build_success_message(type)
+  "iOS打包成功😊: #{package_description(type)}"
+end
+
+
+
+def notify_me(message)
+  notification(message: message)
+end
+
+
+def upload_to_pgyer(type)
+  env = "#{"zbb"}"
+  version = "#{"1.0.0"}"
+  content = "**环境**：#{env}, **更新内容**：#{version}"
+  pgyer(api_key: "61b887a7eb968768505553b7d6aeeb6f", update_description: "#{content}")    #公司账号
+end
+
+
+def export_method(type)
+  export_method = {
+    :Beta  => "development",
+  }[type]
+end
+
+
+def build(type)
+  clean_build_artifacts
+  workspace = $app_workspace
+  scheme = $app_target
+  method = export_method(type)
+  #cocoapods   #pod资源更新
+  #increment_build_number(xcodeproj: "JCD_Company.xcodeproj")
+  #get_certificates           # invokes cert
+  #get_provisioning_profile   # invokes sigh
+  #export_method: app-store、ad-hoc、development、enterprise
+  build_app(workspace: workspace, scheme: scheme, export_method: method)
+end
+
+
+platform :ios do
+  before_all do
+  end
+
+  desc "beta包"
+  lane :beta do
+    execute({:type => :Beta})
+  end
+
+private_lane :execute do |type_map|
+    type = type_map[:type]
+    #sync_code_signing(type: "appstore")
+    build(type)
+    #upload_to_testflight
+    #upload_to_app_store
+    upload_to_pgyer(type)
+    message = build_success_message(type)
+    notify_me(message)
+  end
+
+  error do |lane, exception|
+    notify_me("ZBB打包失败😭")
+  end
+
+end
